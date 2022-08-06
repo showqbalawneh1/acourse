@@ -1,0 +1,124 @@
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+.header{
+    background-color:rgb(91, 93, 119);
+    color: rgb(252, 252, 252);
+    height: 50px;
+    line-height: 50px;
+
+}
+.header a {
+    float: right;
+    margin-top: 5px;
+    
+
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 111, 158, 0.342);
+    position: absolute;
+    z-index: 1;
+}
+.feature{padding: 50px;
+    background-color: #C7CAEA;
+}
+.feature i {
+    width: 100px;
+    height: 100px;
+     /* background-color: rgba(223, 147, 128, 0.616);  */
+    line-height: 100px;
+    color:rgb(92, 4, 4);
+    font-size: 40px;
+    text-align: center;
+    padding-left: 100px;
+
+
+}
+.ourteam {padding: 30px;
+    background-color: rgb(221, 71, 71);
+    background-image: url('/image/background-image1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom:8px solid rgba(25, 60, 177, 0.514);
+   
+}
+.static {
+    background-image: url('/image/سفش5.jpg'); 
+    width: 100%;
+    height: 660px; 
+    background-repeat:no-repeat;
+    background-size: cover;
+    margin-top: 80px;
+    background-attachment: fixed;
+    color: wheat;
+    border-bottom:8px solid rgba(25, 60, 177, 0.514);
+
+}
+.static .overlay{
+    background-color: rgba(25, 60, 177, 0.514);
+    width: 100%;
+    height: 100%;
+}
+.static .overlay h3{padding: 20px;}
+.static .overlay p{
+    padding: 10px;
+    font-size: 20px;
+
+}
+.custmer{
+    height: 300px;
+    background-color: #eee;
+    line-height: 300px;
+    background-image: url('/image/pic.jfif');
+    background-color: rgba(6, 36, 92, 0.877);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 200px;
+    
+    border-bottom:8px solid rgba(138, 143, 153, 0.877) ;
+}
+.recentnews .btn-danger{
+    background-color: rgba(25, 60, 177, 0.514);
+    border-color: rgba(25, 60, 177, 0.514);
+
+
+}
+.recentnews .btn-danger:hover{background-color: rgb(37, 37, 202);}
+footer {
+    background-color:rgb(91, 93, 119) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-top: 30px;
+    color:rgb(2, 2, 31);background-image: url('../image/_Pic.jpg');
+    margin-top: 150px;
+
+}
+footer p{
+    color: rgb(1, 1, 22);
+
+}
+footer ul li{
+    list-style: none;
+}
+.jumbotron{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.jumbotron.blog-info{
+    flex: 2;
+}
+.jumbotron .blog-info{
+    flex: 1;
+}
+.blog-det p{ 
+    line-height: 2;
+    padding: 10px;
+}
+.courses img:hover{
+    transform: scale(1.2);
+}

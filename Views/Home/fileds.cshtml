@@ -1,0 +1,71 @@
+﻿@model List<field>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Global Temperatures</title>
+    <style>
+        body {
+            background-image: url(https://1.bp.blogspot.com/-QOaPMtXp3ks/X2knKjBEUyI/AAAAAAAAFCY/WgpUREPdbHcOoVME-k2EnTamJtst0vRPQCLcBGAsYHQ/s620/%25D8%25AE%25D9%2584%25D9%2581%25D9%258A%25D8%25A7%25D8%25AA-%25D8%25B3%25D8%25A7%25D8%25AF%25D9%2587-%25D9%2585%25D9%2584%25D9%2588%25D9%2586%25D9%2587-%25D8%25A7%25D9%2584%25D9%2588%25D8%25A7%25D9%2586-%25D9%2585%25D9%2588%25D9%2581-%25D9%2584%25D9%2584%25D8%25AA%25D8%25B5%25D9%2585%25D9%258A%25D9%2585-%25D9%2588%25D8%25A7%25D9%2584%25D9%2583%25D8%25AA%25D8%25A7%25D8%25A8%25D9%2587-%25D8%25B9%25D9%2584%25D9%258A%25D9%2587%25D8%25A7-32.jpg);
+            background-size:cover; 
+            }
+        table, th, td {
+            border: none;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        thead th {
+            background-color: rgba(138, 143, 153, 0.877);
+            color: rgb(252, 252, 252);
+            vertical-align: bottom;
+        }
+
+        tbody th {
+            background-color: rgba(86, 111, 158, 0.342);
+            color: white;
+        }
+
+        td {
+            background-color: rgba(86, 111, 158, 0.342);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>filds</h3>
+    <table>
+        <caption>Fields</caption>
+        <thead>
+            <tr>
+                <th>FieldId</th>
+                <th>FieldName</th>
+                <th>FieldDescription</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var field in Model)
+            {
+<tr>
+    <th>@field.fieldId</th>
+    <td><a asp-action="fcou" asp-route-id="@field.fieldId">@field.fname</a></td>
+    <td>@field.description</td>
+    <td>
+        <button><a asp-controller="home" asp-action="editf" asp-route-id="@field.fieldId">edit </a></button>
+        <button><a asp-controller="home" asp-action="deletef" asp-route-id="@field.fieldId">delete</a></button>
+    </td>
+</tr>}
+        </tbody>
+    </table>
+    <a asp-controller="home"
+       asp-action="addf"><input type="button" value="add "></a>
+</body>
+</html>

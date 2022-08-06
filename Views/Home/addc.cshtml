@@ -1,0 +1,78 @@
+﻿@model course 
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List <field> fl = ViewBag.f1;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url(https://1.bp.blogspot.com/-QOaPMtXp3ks/X2knKjBEUyI/AAAAAAAAFCY/WgpUREPdbHcOoVME-k2EnTamJtst0vRPQCLcBGAsYHQ/s620/%25D8%25AE%25D9%2584%25D9%2581%25D9%258A%25D8%25A7%25D8%25AA-%25D8%25B3%25D8%25A7%25D8%25AF%25D9%2587-%25D9%2585%25D9%2584%25D9%2588%25D9%2586%25D9%2587-%25D8%25A7%25D9%2584%25D9%2588%25D8%25A7%25D9%2586-%25D9%2585%25D9%2588%25D9%2581-%25D9%2584%25D9%2584%25D8%25AA%25D8%25B5%25D9%2585%25D9%258A%25D9%2585-%25D9%2588%25D8%25A7%25D9%2584%25D9%2583%25D8%25AA%25D8%25A7%25D8%25A8%25D9%2587-%25D8%25B9%25D9%2584%25D9%258A%25D9%2587%25D8%25A7-32.jpg);
+            background-size: cover;
+        }
+        h2{
+            background-color:dimgrey;
+  
+            padding: 20px ; 
+        }
+        table, th, td {
+            border: none;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+        lable{ font:bold; }
+        thead, th {
+            background-color: rgb(252, 252, 252);
+            color: rgba(138, 143, 153, 0.877);
+            vertical-align: bottom;
+        }
+
+        tbody, th {
+            background-color: rgba(86, 111, 158, 0.342);
+            color: rgba(138, 143, 153, 0.877);
+        }
+
+        .o {
+            background-color: rgba(138, 143, 153, 0.877);
+            text-align: center;
+            width: 40%;
+            height: 2em; 
+        }
+
+        .g {
+            background-color: rgb(91, 93, 119);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>add course </h2>
+
+    <form asp-controller="home" asp-action="addc" method="post">
+        <label asp-for="@Model.cname">course name :</label><br>
+        <input class="o" type="text" asp-for="@Model.cname"><br>
+        <label asp-for="@Model.describtion">course descreption: </label><br>
+        <input class="o" type="text" asp-for="@Model.describtion"><br><br>
+        <select asp-for="@Model.fieldId">
+           @foreach(var field in fl)
+           {
+            <option value="@field.fieldId">@field.fname</option>
+           }
+            </select>
+        <input class="g" type="submit" value="Submit">
+    </form>
+
+
+
+</body>
+</html>
